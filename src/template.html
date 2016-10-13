@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div class="container">
+    <div id="app">Loading...</div>
+</div>
+<script type="text/javascript" src="https://unpkg.com/react@15.3.2/dist/react.min.js"></script>
+<script type="text/javascript" src="https://unpkg.com/react-dom@15.3.2/dist/react-dom.min.js"></script>
+<script type="text/javascript" src="/bundle.js"></script>
+
+<script>
+
+    var instance = React.createElement(Cropper, {
+        options:{
+            imgUrl: 'bus.png',
+            rectOptions: {
+                left: 100,
+                top: 0,
+                height: 500,
+                width: 400,
+                fill: '#00f'
+            }
+        }
+    });
+    var CropperRendered = ReactDOM.render(instance, document.getElementById('app'));
+
+</script>
+</body>
+</html>
